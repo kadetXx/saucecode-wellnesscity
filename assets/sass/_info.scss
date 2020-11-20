@@ -2,16 +2,32 @@
   margin-top: 100px;
   padding-left: 0;
   padding-right: 0;
-  
+
+  @media (max-width: 600px) {
+    margin-top: 0;
+  }
+
   .section-title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    
+
     p {
-      margin: .5rem 0;
+      margin: 0.5rem 0;
       line-height: 2;
+    }
+
+    @media (max-width: 600px) {
+      padding: 0 5%;
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
     }
   }
 
@@ -22,11 +38,21 @@
     padding-right: 10%;
     padding-left: 10%;
 
+    @media (max-width: 600px) {
+      padding-left: 5%;
+      padding-right: 5%;
+      flex-direction: column;
+    }
+
     .features {
       display: flex;
       flex-direction: column;
       width: 35%;
 
+      @media (max-width: 600px) {
+        width: 100%;
+        padding: 0 5%;
+      }
 
       .feature {
         margin-bottom: 2rem;
@@ -41,10 +67,13 @@
         }
 
         .text-container {
+          @media (min-width: 850px) {
+            padding-right: 20%;
+          }
 
-        @include respond(min, 850px) {
-          padding-right: 20%;
-        }
+          @media (max-width: 600px) {
+            padding-right: 15%;
+          }
 
           h4 {
             font-size: 1.2rem;
@@ -52,7 +81,7 @@
           }
 
           p {
-            font-size: .8rem;
+            font-size: 0.8rem;
           }
         }
       }
@@ -74,23 +103,35 @@
         max-width: 80%;
         margin: 0 auto;
       }
+
+      @media (max-width: 600px) {
+        width: 100%;
+
+        img {
+          max-width: 60%;
+        }
+      }
     }
 
     .features.two {
       margin-top: 4rem;
-      
+
       .feature {
         align-items: flex-end;
         text-align: right;
 
         .text-container {
-          @include respond(min, 850px) {
+          @media (min-width: 850px) {
             padding-left: 20%;
+            padding-right: 0;
+          }
+
+          @media (max-width: 600px) {
+            padding-left: 15%;
             padding-right: 0;
           }
         }
       }
     }
   }
-
 }

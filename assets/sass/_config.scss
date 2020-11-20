@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -21,39 +25,49 @@ p {
   color: #7d7987;
 }
 
-section {
-  padding: 2rem 10%;
-}
-
 button.primary {
-  padding: .7rem 1.5rem;
+  padding: 0.7rem 1.5rem;
   background-color: $primaryColor;
   color: #fff;
   border: none;
   border-radius: 9px;
-  font-size: .7rem;
+  font-size: 0.7rem;
+}
+
+
+section {
+  padding: 2rem 10%;
+
+  @media (max-width: 600px) {
+    padding: 2rem 5%;
+  }
 }
 
 // breakpoint calculator
 
-@mixin respond($type, $breakpoint) {
-  @media only screen and (max-width: $breakpoint) {
-    @content;
-  }
-}
+// @mixin max($breakpoint) {
+//   @media (max-width: $breakpoint) {
+//     @content;
+//   }
+// }
+
+// @mixin min($breakpoint) {
+//   @media (min-width: $breakpoint) {
+//     @content;
+//   }
+// }
 
 
+// @mixin respond($type, $breakpoint) {
+//   @if $type==min {
+//     @media only screen and (min-width: $breakpoint) {
+//       @content;
+//     }
+//   }
 
-@mixin respond($type, $breakpoint) {
-  @if $type==min {
-    @media only screen and (min-width: $breakpoint) {
-      @content;
-    }
-  }
-
-  @if $type==max {
-    @media only screen and (max-width: $breakpoint) {
-      @content;
-    }
-  }
-}
+//   @if $type==max {
+//     @media only screen and (max-width: $breakpoint) {
+//       @content;
+//     }
+//   }
+// }

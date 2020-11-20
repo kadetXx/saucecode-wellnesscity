@@ -1,10 +1,18 @@
 header {
   padding: 2rem 10%;
+
+  @media (max-width: 600px) {
+    padding: 2rem 5%;
+  }
 }
 
 .hero {
   display: flex;
   margin-bottom: 4rem;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 
   .text-container {
     width: 50%;
@@ -13,13 +21,30 @@ header {
     justify-content: center;
     padding: 2rem 0;
 
+    @media (max-width: 600px) {
+      width: 100%;
+      padding-top: 0;
+    }
+
     h1 {
       line-height: 1.3;
       margin-bottom: 1rem;
+
+      @media (max-width: 600px) {
+        font-size: 1.5rem;
+      }
     }
 
     p {
       line-height: 2;
+
+      @media (max-width: 600px) {
+        font-size: 1rem;
+
+        br {
+          display: none;
+        }
+      }
     }
 
     p:nth-child(3) {
@@ -35,6 +60,13 @@ header {
       border-radius: 0 39px 39px 0;
       height: 64px;
       width: 95%;
+      box-sizing: border-box;
+
+      @media (max-width: 600px) {
+        width: 100%;
+        height: 50px;
+        justify-content: space-between;
+      }
 
       label {
         display: flex;
@@ -47,6 +79,8 @@ header {
           padding: 0 1rem;
           color: rgba(34, 34, 34, 0.6);
         }
+
+        
       }
 
       input {
@@ -56,6 +90,10 @@ header {
         height: 100%;
         flex-grow: 1;
         outline: none;
+
+        @media (max-width: 600px) {
+          width: 40px;
+        }
       }
 
       input::placeholder {
@@ -67,6 +105,12 @@ header {
       button {
         height: 100%;
         border-radius: 39px;
+
+        @media (max-width: 600px) {
+          width: 120px;
+          padding-right: 1.5rem;
+          padding-left: 1.5rem;
+        }
       }
     }
 
@@ -107,6 +151,16 @@ header {
       position: absolute;
       top: -30%;
       margin: auto;
+    }
+
+    @media (max-width: 600px) {
+      width: 100%;
+      justify-content: center;
+
+      img {
+        position: static;
+        max-width: 80%;
+      }
     }
   }
 }

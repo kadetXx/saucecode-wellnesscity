@@ -6,17 +6,34 @@
   padding-bottom: 7%;
   margin-bottom: 5rem;
 
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
+
   .form-container {
     width: 50%;
+
+    @media (max-width: 600px) {
+      width: 100%;
+      padding: 2.5rem 0;
+    }
 
     .form-title {
       h3 {
         color: #fff;
         margin-bottom: 1rem;
+
+        @media (max-width: 600px) {
+          font-size: 1.5rem;
+        }
       }
 
       p {
         color: #efefef;
+
+        @media (max-width: 600px) {
+          font-size: 0.9rem;
+        }
       }
     }
 
@@ -28,6 +45,12 @@
       height: 50px;
       width: 95%;
       margin-top: 2rem;
+
+      @media (max-width: 600px) {
+        width: 100%;
+        height: 45px;
+        justify-content: space-between;
+      }
 
       label {
         display: flex;
@@ -52,6 +75,10 @@
         outline: none;
         background: transparent;
         color: #fff;
+
+        @media (max-width: 600px) {
+          width: 40px;
+        }
       }
 
       input::placeholder {
@@ -74,10 +101,18 @@
     align-items: center;
     position: relative;
 
+    @media (max-width: 600px) {
+      display: none;
+    }
+
     img {
       position: absolute;
       max-width: 135%;
       margin-top: 2rem;
+
+      @media (max-width: 600px) {
+        position: relative;
+      }
     }
   }
 
@@ -86,6 +121,10 @@
     width: 90%;
     justify-content: flex-start;
     margin-top: 1.5rem;
+
+    @media (max-width: 600px) {
+      margin-top: 2rem;
+    }
 
     button {
       width: fit-content;
@@ -102,6 +141,22 @@
         max-width: 100%;
         height: 50px;
       }
+    }
+  }
+}
+
+.mobile-extra {
+  display: none;
+
+  @media(max-width: 600px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 0;
+
+    img {
+      max-width: 120%;
     }
   }
 }
