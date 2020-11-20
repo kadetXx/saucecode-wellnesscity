@@ -5,11 +5,15 @@
 * {
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
-  overflow-x: hidden;
+  
+  @media(max-width: 600px) {
+    overflow-x: hidden;
+  }
 }
 
 body {
   overflow-x: hidden;
+  margin: 0;
 }
 
 h1,

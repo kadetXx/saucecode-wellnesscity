@@ -149,6 +149,8 @@ header {
     position: relative;
     display: flex;
     justify-content: flex-end;
+    // overflow-x: auto;
+    overflow-y: visible;
 
     img {
       position: absolute;
